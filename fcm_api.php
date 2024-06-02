@@ -1,6 +1,4 @@
 <?php
-require_once("/var/www/fastuser/data/www/dev.cr-house.ru/vendor/autoload.php");
-
 use Google\Auth\Credentials\ServiceAccountCredentials;
 use Google\Auth\Middleware\AuthTokenMiddleware;
 use GuzzleHttp\Client;
