@@ -5,10 +5,9 @@ class base
     {
         //  $query = str_replace("`", "\"", $query);;
         $host = 'localhost';
-        $user = 'chat_data_usr';
-        $pass = 'CeoeTjHMEorQBp7B';
-        //      $pass = 'R4UE0CSwBvscO8lW';
-        $db_name = 'chat_data';
+        $user = '';
+        $pass = '';
+        $db_name = '';
         $link = new PDO('mysql:dbname=' . $db_name . ';host=' . $host, $user, $pass);
         $link->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
         $link->exec("set names utf8mb4");
