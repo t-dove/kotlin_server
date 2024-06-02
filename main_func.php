@@ -95,15 +95,15 @@ function send_email($alt_body,$body,$subject, $to)
     try {
         // Settings
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'cr-house.ru';                     //Set the SMTP server to send through
+        $mail->Host       = '';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'notify@cr-house.ru';                     //SMTP username
-        $mail->Password   = 'jNo7EsqGqF0ZnYgt';                               //SMTP password
+        $mail->Username   = '';                     //SMTP username
+        $mail->Password   = '';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         $mail->CharSet = "UTF-8";
         // Content
-        $mail->setFrom('notify@cr-house.ru');
+        $mail->setFrom('');
         $mail->FromName = "CyberHouse";
         $mail->addAddress($to);
         $mail->isHTML(true);                       // Set email format to HTML
@@ -111,8 +111,8 @@ function send_email($alt_body,$body,$subject, $to)
         $mail->Body    = $body;
         $mail->AltBody = $alt_body;
 
-        $mail->DKIM_domain = 'cr-house.ru';
-        $mail->DKIM_private = '/var/www/cr_house_ru_usr/data/key-private.pem';
+        $mail->DKIM_domain = '';
+        $mail->DKIM_private = '';
         $mail->DKIM_selector = 'mail';
 
         $mail->send();
